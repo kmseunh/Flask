@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
 </head>
 <body>
+{% extends 'base.html' %}
+{% block content %}
 <!-- 질문 목록 -->
 <div class="container my-3">
     <table class="table">
@@ -37,5 +38,6 @@
         </tbody>
     </table>
 </div>
+{% endblock %}
 </body>
 </html>
