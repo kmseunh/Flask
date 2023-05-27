@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from .auth_views import login_required
 from flask import Blueprint, url_for, request, render_template, g
 from werkzeug.utils import redirect
 
@@ -11,6 +11,7 @@ bp = Blueprint('answer', __name__, url_prefix='/answer')
 
 
 @bp.route('/create/<int:question_id>', methods=('POST',))
+@login_required
 def create(question_id):
     form = AnswerForm()
     question = Question.query.get_or_404(question_id)
