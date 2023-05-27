@@ -1,5 +1,5 @@
 from datetime import datetime
-from pybo.views.auth_views import login_required
+from shboard.views.auth_views import login_required
 from flask import Blueprint, render_template, request, url_for, g
 from werkzeug.utils import redirect
 
